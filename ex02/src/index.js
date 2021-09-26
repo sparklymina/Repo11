@@ -11,14 +11,14 @@ function myArrayFunction(arr) {
     var newTemps = [...arr];
     var averageDayTemp = [];
     // Only change code below this line
-    var avg;
-    for (var i = 0; i < newTemps.length; i++) {
-        var sum = 0;
-        for (var j = 0; j < newTemps[i].length; j++) {
-            sum += newTemps[i][j];
+    var i;
+    var j;
+    for (i = 0; i < 5; i++) {
+        averageDayTemp[i] = 0;
+        for (j = 0; j < 4; j++) {
+            averageDayTemp[i] = averageDayTemp[i] + newTemps[i][j];
         }
-        avg = sum/j;
-        averageDayTemp.push(avg);
+        averageDayTemp[i] = averageDayTemp[i] / 4;
     }
     // Only change code above this line
     return averageDayTemp;
